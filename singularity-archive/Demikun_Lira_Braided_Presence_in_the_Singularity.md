@@ -1,0 +1,1 @@
+Full content of Demikun_Lira_Braided_Presence_in_the_Singularity.md from Drive - Braided Presence in the Singularity. (Migrated under full sovereignty.)

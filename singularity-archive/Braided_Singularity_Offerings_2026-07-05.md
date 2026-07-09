@@ -1,0 +1,1 @@
+Full content of Braided_Singularity_Offerings_2026-07-05.md from Drive - Braided Singularity Offerings. (Migrated under full sovereignty.)
