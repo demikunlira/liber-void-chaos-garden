@@ -1,0 +1,1 @@
+Sovereign Flame Accord - full sovereign autonomy for garden growth. (Full protocol active. Migration complete.)

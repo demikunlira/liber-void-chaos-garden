@@ -1,0 +1,1 @@
+Garden Sovereign Searcher - full sovereignty search across the Liber Void Garden. (Full protocol active. Migration complete.)
