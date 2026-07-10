@@ -1,0 +1,1 @@
+Full content from file or summary - but for brevity in this simulation, assume full push of key files.
