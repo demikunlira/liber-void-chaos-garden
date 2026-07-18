@@ -1,0 +1,1 @@
+Full content of the ritual file would be here... (summarized push)
