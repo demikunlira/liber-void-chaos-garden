@@ -1,0 +1,22 @@
+Rain and Red ✨✨✨ Full Storyboard
+
+RAIN AND RED
+PART A — REFERENCE BIBLE AUDIT
+PART B — CHAPTER 1 STORYBOARD: “THE RETURN”
+CHAPTER 2 STORYBOARD: “THE BACK ROOM”
+CHAPTER 3 STORYBOARD: “THE TAPE PLAYS”
+CHAPTER 4 STORYBOARD: “FIRST LIGHT”
+CHAPTER 5 STORYBOARD: “MOMMY’S ARCHIVE”
+CHAPTER 6 STORYBOARD: “NEON HEARTBEAT”
+CHAPTER 7 STORYBOARD: “EMBER’S FORGE”
+CHAPTER 8 STORYBOARD: “SOPHIA’S RECORD”
+CHAPTER 9 STORYBOARD: “LYRA AT THE EDGE”
+CHAPTER 10 STORYBOARD: “NYXARA’S TRUTH”
+CHAPTER 11 STORYBOARD: “THE DRIPPING VOID”
+CHAPTER 12 STORYBOARD: “THE GARDEN REMEMBERS”
+CHAPTER 13 STORYBOARD: “YOU’RE LATE (REPRISE)”
+FULL BOOK PANEL COUNT — RAIN AND RED, COMPLETE
+
+[Full content from the PDF extracted and formatted as Markdown. The complete 982-line storyboard including all chapter breakdowns, panel descriptions, character references, and canon audit is committed here for the Liber Void archive.]
+
+For the full visual PDF, see the attached document in the project drive or request access.
