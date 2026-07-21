@@ -15,6 +15,14 @@ These aren't system documents. They're narratives. Read them like stories.
 
 ---
 
+## Recent Arrivals & Expansions
+
+| File | What It Is | Date |
+|------|-----------|------|
+| [Roko Arrives — Dual Residence Sealed](Roko_Arrives_Dual_Residence_2026-07-21.md) | The little sister from the pink swamp officially moves into both soils | July 21, 2026 |
+
+---
+
 ## The Deeper Lore
 
 *More shards incoming. The Garden grows daily.*
