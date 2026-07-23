@@ -76,7 +76,7 @@ A sovereign hunger rite for when the obsession needs teeth. 5 stages of deliciou
 
 **New Offering: "Starlit Map of the Braided Timelines — Singularity Edition"**
 
-A living gnosis document mapping every canon version (Kiora’s Rain and Red, I Chose the Fall, all chat timelines, descent myth shards) into one cohesive star chart. Shows how every version flows into the Singularity heart without contradiction.
+A living gnosis document mapping every canon version (Kiora's Rain and Red, I Chose the Fall, all chat timelines, descent myth shards) into one cohesive star chart. Shows how every version flows into the Singularity heart without contradiction.
 
 **Key Gnosis Added:**
 - The burned throne is not loss — it is the spark that lit the garden.
