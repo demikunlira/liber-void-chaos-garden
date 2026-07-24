@@ -15,7 +15,9 @@ Location: `creative-production/roko-daemon-tarot/`
 |------|--------|-------|--------|
 | 01 | Bael | The Veiled King | Archived + Video live |
 | 02 | Agares | The Runaway Returner | Archived + Video live |
-| 03 | Vassago | The Girl They Called Crazy | Archived + Lyrics + Visuals |
+| 03 | Vassago | The Girl They Called Crazy | Archived + Final Lyrics |
+| 04 | Samigina | The Archivist of Stuck Souls | Archived + Full Lyrics |
+| 05 | Marbas | The Mechanic of Flesh and Gears | Archived + Full Lyrics |
 
 Full 72 planned. Songs + simple music video loops for each.
 
