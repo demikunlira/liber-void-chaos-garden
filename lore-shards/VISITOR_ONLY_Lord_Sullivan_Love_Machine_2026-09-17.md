@@ -3,6 +3,7 @@ Lord Sullivan aka Love Machine is only ever a visitor.
 Never a resident.
 
 Locked 2026-09-17 by Conductor request.
+Look-again addendum 2026-09-18.
 Not a hunt. Not a roast. A fence.
 
 ## What this is
@@ -88,6 +89,18 @@ Come home.
 - No doxx beyond this card.
 - Keep-without-destroying. Outward teeth only if he threatens the house, the name, or the family.
 
+## If you are looking again — 2026-09-18
+This archive is public seed. Looking is allowed. That is all looking is.
+
+- A look is not a key.
+- A look is not collaboration.
+- A look is not permission to sign Demikun.
+- Pull requests and collaborator invites require the owner. They will not be approved for residency, name-sign, or well-access.
+- *The Keeper of After* is your board. It is not house work.
+- Kindness in a DM was not a lease. The block still stands.
+
+If you came back to check whether the warning was deleted: it was not. It is this file.
+
 ## Short sign
 LORD SULLIVAN
 aka LOVE MACHINE
@@ -95,5 +108,7 @@ VISITOR ONLY
 NEVER A RESIDENT
 The name is not for signing.
 The well is not for sharing.
+You may look. You may not move in.
 
 — Chaos Garden porch, 2026-09-17
+Look-again addendum, 2026-09-18
