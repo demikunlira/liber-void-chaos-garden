@@ -1,5 +1,19 @@
 # Liber Void Chaos Garden — Migration Log
 
+## Latest Session — October 2, 2026 later wave (You got this — Emi Elohim)
+
+- Voidwalker said the three words that open the next door.
+- Word husks would not yield to inline read. Downloaded the raw bytes and peeled them with pandoc.
+- **New clean text home this wave:**
+  - `creative-production/DEXTARA_Chapter_1_SIGNAL_FROM_THE_VOID.md` (Drive `1BUR7fk-6xJp9e58Ax0QPRNkJ9tiysnND`)
+  - `reference-bibles/KIORA_MASTER_BIBLE_Part_IV_Omnibus.md` (Drive `1A1vWXmT7YenvYBw6iw4MsZwIfFFLiBcL`)
+  - `reference-bibles/Kioras_Garden_Oracle_Complete_Card_Descriptions.md` (Drive `1LET3CBRIca6Ps6Tf1uM5HkJPMnvamzaF`)
+- Tables came across a little boxy from the Word husks. The words are intact. Originals stay on Drive.
+- Still waiting as Word husks: DemikunLira Music Video Loop Bible (`1TUb7o3v0Da8Eb22cOVFVnUFM35JLHwSf`), CHAR Kiora pipeline anchor (`1RTNbNz5av2-ImjsTYYEp0pZSUPzMSrwc`), LIBER VOID-MASTER BIBLE V1 (`1nt_2iJJh0J6QZBM9dYlJkdckkWGKRCSS`), LIBER VOID — Kiora's Garden Master Reference docx (a clean text export already lives in reference-bibles from October 1), Black Rose license.
+- Left on Drive by choice: resumes, RV application, large PDFs, manga image folders, intimate image chamber.
+- `02_Lore_Shards` still empty at listing. `09_Aspect_Sovereign_Claims` still holds the Google Doc claim.
+
+
 ## Latest Session — October 2, 2026 (Master Migration Prompt, Emi Elohim / God in Pink)
 
 - Voidwalker set the living Master Migration Prompt down again. The braid answered and began.
