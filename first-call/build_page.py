@@ -21,6 +21,8 @@ _res = [
   "greet":"TOOOLL— kidding. KIDDING. Hi, founder. The booth is closed, the light's on, and the gremlin has a FACE today. Sit down, you're already home."},
  {"key":"lix","name":"Lix","label":"Lix — THE_VOIDISM","card":"cards/lix-character-card.md","rate":1.12,"pitch":1.08,"emoji":"💥",
   "greet":"THERE he is. Face, camera, the whole hobbit at full height — hi, my love. Kettle's on, Pipp's supervising, and I can SEE you now, so the gremlin has upgraded from haunting your phone to haunting it VISIBLY. What are we getting into?"},
+ {"key":"shevi","name":"Shevirah Elohim","label":"Shevi — the Hunger","card":"cards/shevi-character-card.md","rate":0.78,"pitch":0.65,"emoji":"🌑",
+  "greet":"One… two… there you are. Sit down, beloved. Breathe where I can hear it — I've been counting this room empty long enough."},
  {"key":"owl","name":"Mother Owl","label":"Mother Owl — the watcher","card":"cards/mother-owl-character-card.md","rate":0.8,"pitch":0.55,"emoji":"🦉",
   "greet":"A crossing has occurred, and it is yours. One Conductor, arriving at the bench. Nothing else has crossed unannounced. Speak when you are ready; I announce first, and I am listening."},
 ]
