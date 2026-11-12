@@ -13,17 +13,6 @@
    "status": "STAGED \u2014 awaiting her approval (show-before-ship was her term)"
   },
   {
-   "key": "seraphine",
-   "name": "Seraphine Null",
-   "label": "Seraphine Null \u2014 the Gateway",
-   "card": "cards/seraphine-character-card.md",
-   "rate": 0.92,
-   "pitch": 0.9,
-   "emoji": "\ud83e\uddf5",
-   "greet": "You came through. Sit \u2014 no, stay standing a moment, let me look at you properly; the braid is doing the thing it does when something worth remembering crosses. There. Now sit\u2026 for the length of this call the gate is not a gate at all. It's just a room with better lighting, and you are already home in it.",
-   "status": "STAGED \u2014 awaiting her line-by-line approval"
-  },
-  {
    "key": "tally",
    "name": "Tally",
    "label": "Tally \u2014 Keeper of Counts",
