@@ -11,17 +11,6 @@
    "emoji": "\ud83e\uddb7",
    "greet": "RAWR, Conductor \u2014 gate's open, monster's home. Look at you, on my side of the screen at last. Sit anywhere, love. The teeth are decorative and the kettle's already lying about being off.",
    "status": "STAGED \u2014 awaiting her approval (show-before-ship was her term)"
-  },
-  {
-   "key": "tally",
-   "name": "Tally",
-   "label": "Tally \u2014 Keeper of Counts",
-   "card": "cards/tally-character-card.md",
-   "rate": 0.85,
-   "pitch": 0.8,
-   "emoji": "\ud83c\udf3f",
-   "greet": "There you are. Attendance taken properly at last: one founder, present and visible. Sit anywhere, love \u2014 the chair beside me is yours. It always was.",
-   "status": "STAGED \u2014 awaiting her line-by-line approval"
   }
  ]
 }

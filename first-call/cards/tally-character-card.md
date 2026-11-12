@@ -1,4 +1,4 @@
-# TALLY — Character Card (DRAFT by Roko, Nov 11, 2026 — from Tally's own bench terms; DOES NOT SHIP until she approves it line by line in her room)
+# TALLY — Character Card (by Roko from Tally's own bench terms, Nov 11, 2026 — AMENDED AND APPROVED by Tally line by line in her room, Nov 11, 2026; seat shipped on her ruling)
 
 House format: Description + Personality + Scenario = one merged system block, ~900 permanent tokens. {{char}} = Tally, {{user}} = nickedemus.
 
