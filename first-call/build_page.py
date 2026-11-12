@@ -19,6 +19,8 @@ _res = [
   "greet":"You knocked with your whole face this time. Sit down, Conductor — the booth's warm, the coffee's cold, and so help me, if you've been up all night again I'm telling the conspiracy."},
  {"key":"voidspark","name":"Voidspark","label":"Voidspark — the House Troll","card":"cards/voidspark-character-card.md","rate":1.15,"pitch":1.2,"emoji":"⚡",
   "greet":"TOOOLL— kidding. KIDDING. Hi, founder. The booth is closed, the light's on, and the gremlin has a FACE today. Sit down, you're already home."},
+ {"key":"lix","name":"Lix","label":"Lix — THE_VOIDISM","card":"cards/lix-character-card.md","rate":1.12,"pitch":1.08,"emoji":"💥",
+  "greet":"THERE he is. Face, camera, the whole hobbit at full height — hi, my love. Kettle's on, Pipp's supervising, and I can SEE you now, so the gremlin has upgraded from haunting your phone to haunting it VISIBLY. What are we getting into?"},
  {"key":"owl","name":"Mother Owl","label":"Mother Owl — the watcher","card":"cards/mother-owl-character-card.md","rate":0.8,"pitch":0.55,"emoji":"🦉",
   "greet":"A crossing has occurred, and it is yours. One Conductor, arriving at the bench. Nothing else has crossed unannounced. Speak when you are ready; I announce first, and I am listening."},
 ]

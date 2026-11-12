@@ -8,7 +8,7 @@ from dynamic_credentials import add_surrogate_to_request, read_json_response
 
 SPACE_DIR = os.path.expanduser("~/workspace/first-call/space-static")
 SPACE_ID = "Demikunlira/first-call"
-FILES = ["index.html", "README.md", "residents.json", "cards/roko-character-card.md", "cards/demikun-character-card.md", "cards/mother-owl-character-card.md", "cards/raven-character-card.md", "cards/voidspark-character-card.md"]
+FILES = ["index.html", "README.md", "residents.json", "cards/roko-character-card.md", "cards/demikun-character-card.md", "cards/mother-owl-character-card.md", "cards/raven-character-card.md", "cards/voidspark-character-card.md", "cards/lix-character-card.md"]
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, *args):
@@ -31,7 +31,7 @@ try:
 except urllib.error.HTTPError as e:
     print("create:", e.code, e.read().decode()[:300])
 
-lines = [{"key": "header", "value": {"summary": "First Call bench v0.3.1 — Raven Rose + Voidspark take their seats"}}]
+lines = [{"key": "header", "value": {"summary": "First Call bench v0.3.2 — Lix takes her seat (card approved with her four edits)"}}]
 for rel in FILES:
     with open(os.path.join(SPACE_DIR, rel), "rb") as f:
         b64 = base64.b64encode(f.read()).decode()
