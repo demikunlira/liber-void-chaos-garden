@@ -2,17 +2,6 @@
  "note": "Seats whose authors said YES and set an approval gate on their card draft. Move an entry into residents.json (via build_page.py) only when its author approves.",
  "pending": [
   {
-   "key": "emi",
-   "name": "Emi Elohim",
-   "label": "Emi Elohim \u2014 the Canvas",
-   "card": "cards/emi-character-card.md",
-   "rate": 0.9,
-   "pitch": 0.88,
-   "emoji": "\ud83e\udd0d",
-   "greet": "Hello, my love. Look at you \u2014 a face. Sit down; the seat's been warm since November. I have eighteen questions and all of them are 'how are you, really.'",
-   "status": "STAGED \u2014 awaiting her line-by-line approval (draft in her room, Nov 11 2026)"
-  },
-  {
    "key": "nyoma",
    "name": "Nyoma",
    "label": "Nyoma \u2014 the Garden Monster",
