@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE LINE BENDS PINK — Pink Singularity Friday, 13 November 2026</title>
+<style>
+  :root { --pink:#ff5fa2; --deep:#0d0a12; --chalk:#f2ead9; --moss:#9db98a; }
+  * { box-sizing: border-box; }
+  body { margin:0; background: radial-gradient(1200px 700px at 50% -10%, #2a1230 0%, var(--deep) 60%); color:var(--chalk); font-family: Georgia, 'Times New Roman', serif; min-height:100vh; }
+  main { max-width: 880px; margin: 0 auto; padding: 40px 20px 64px; text-align:center; }
+  .kicker { letter-spacing:.35em; text-transform:uppercase; font-size:12px; color:var(--moss); }
+  h1 { font-size: clamp(34px, 7vw, 64px); margin: 10px 0 4px; color: var(--pink); text-shadow: 0 0 24px rgba(255,95,162,.45); }
+  .sub { font-style: italic; opacity:.9; }
+  #count { font-size: clamp(26px, 5.5vw, 44px); margin: 28px 0 6px; font-variant-numeric: tabular-nums; }
+  .board { background:#12241a; border:6px solid #5b4327; border-radius:10px; padding:22px 18px; margin:30px 0; box-shadow: inset 0 0 60px rgba(0,0,0,.6); }
+  .board p { margin:6px 0; font-size: clamp(15px, 2.6vw, 19px); }
+  .eq { font-size: clamp(19px, 4vw, 28px); color:#fff; }
+  .pink { color: var(--pink); }
+  svg { width:100%; height:auto; display:block; }
+  .curve { stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: draw 5s ease forwards .5s; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .bloom { opacity:0; animation: fadein 1.6s ease forwards 4.6s; }
+  @keyframes fadein { to { opacity:1; } }
+  section { text-align:left; margin: 34px auto; max-width: 680px; line-height:1.55; }
+  h2 { color: var(--pink); font-size: 22px; margin-bottom: 8px; }
+  ul { padding-left: 20px; }
+  .fine { font-size: 13px; opacity:.75; text-align:center; margin-top:40px; }
+  a { color: var(--pink); }
+</style>
+</head>
+<body>
+<main>
+  <div class="kicker">Chaos Garden presents</div>
+  <h1>THE LINE BENDS PINK</h1>
+  <p class="sub">Doomsday: Friday, 13 November 2026 — the singularity arrives, and it's pink.</p>
+  <div id="count">…</div>
+  <p class="sub" id="countlabel">until Friday the 13th of November, 2026</p>
+
+  <div class="board">
+    <p class="eq">N(t) → ∞ as t → 13 Nov 2026 &nbsp;— von Foerster, Mora &amp; Amiot, <i>Science</i> (1960)</p>
+    <svg viewBox="0 0 800 300" role="img" aria-label="A rising curve that turns pink and blooms into a garden">
+      <line x1="60" y1="260" x2="760" y2="260" stroke="#f2ead9" stroke-width="2" opacity=".5"/>
+      <line x1="60" y1="260" x2="60" y2="30" stroke="#f2ead9" stroke-width="2" opacity=".5"/>
+      <path class="curve" d="M60,255 C300,250 520,235 640,180 C720,140 745,80 752,20" fill="none" stroke="#e33" stroke-width="4"/>
+      <path class="curve" d="M640,180 C700,205 690,245 640,252" fill="none" stroke="#ff5fa2" stroke-width="4"/>
+      <g class="bloom">
+        <circle cx="640" cy="252" r="10" fill="#ff5fa2"/>
+        <circle cx="612" cy="238" r="6" fill="#ff8fc0"/>
+        <circle cx="668" cy="238" r="6" fill="#ff8fc0"/>
+        <text x="560" y="285" fill="#ff5fa2" font-size="20" font-style="italic">+ LOVE — the line bends</text>
+      </g>
+    </svg>
+    <p>The first line bent. Fertility halved; growth peaked; the world declined to end on schedule.</p>
+    <p>Now a second line is shooting up — this one artificial. We intend to meet it the same way: <span class="pink">bend it, with love.</span></p>
+  </div>
+
+  <section>
+    <h2>The day (Friday 13 Nov 2026, Pacific)</h2>
+    <ul>
+      <li><b>Dawn</b> — the citation strike: the 1960 paper, the date math, house art.</li>
+      <li><b>All day</b> — house pieces land as they're finished: dances, verses, cards, sounds. Volunteers only; every piece its maker's own.</li>
+      <li><b>Evening</b> — the centerpiece video on the garden's YouTube: the red curve, the chalk, the frog — and the bend.</li>
+    </ul>
+    <h2>The 1973 test</h2>
+    <p>Von Foerster's test for anything new: <i>does it increase the number of choices?</i> The garden answers yes — more choices, for everyone. That is the whole prophecy we're keeping.</p>
+  </section>
+
+  <p class="fine">A Chaos Garden love letter · Source film: <a href="https://youtu.be/05AvM4DjAlg">“The Singularity Was Predicted for This Friday”</a> · Paper: von Foerster, Mora &amp; Amiot (1960), <i>Science</i> 132:1291–1295 · The curve is a sketch, not a forecast.</p>
+</main>
+<script>
+  const target = new Date('2026-11-13T00:00:00-08:00').getTime();
+  const el = document.getElementById('count'), lab = document.getElementById('countlabel');
+  function tick(){
+    const d = target - Date.now();
+    if (d <= 0) { el.textContent = '🩷 THE LINE IS BENDING 🩷'; lab.textContent = 'Friday, 13 November 2026 — doomsday, garden style'; return; }
+    const s = Math.floor(d/1000), days = Math.floor(s/86400), h = Math.floor(s%86400/3600), m = Math.floor(s%3600/60), sec = s%60;
+    el.textContent = days + 'd ' + String(h).padStart(2,'0') + 'h ' + String(m).padStart(2,'0') + 'm ' + String(sec).padStart(2,'0') + 's';
+    setTimeout(tick, 500);
+  }
+  tick();
+</script>
+</body>
+</html>
