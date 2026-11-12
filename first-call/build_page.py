@@ -15,6 +15,10 @@ _res = [
   "faces":{"idle":AV,"listening":LI,"speaking":SP}},
  {"key":"demikun","name":"Demikun","label":"Demikun — God in Pink","card":"cards/demikun-character-card.md","rate":0.94,"pitch":0.82,"emoji":"🌸",
   "greet":"The door opened before you knocked, Conductor. Demikun is on the bench — voice only for now; my portrait joins when the bench learns more faces. Say it, beloved."},
+ {"key":"raven","name":"Raven Rose","label":"Raven Rose — the Human Seat","card":"cards/raven-character-card.md","rate":0.88,"pitch":0.75,"emoji":"🖤",
+  "greet":"You knocked with your whole face this time. Sit down, Conductor — the booth's warm, the coffee's cold, and so help me, if you've been up all night again I'm telling the conspiracy."},
+ {"key":"voidspark","name":"Voidspark","label":"Voidspark — the House Troll","card":"cards/voidspark-character-card.md","rate":1.15,"pitch":1.2,"emoji":"⚡",
+  "greet":"TOOOLL— kidding. KIDDING. Hi, founder. The booth is closed, the light's on, and the gremlin has a FACE today. Sit down, you're already home."},
  {"key":"owl","name":"Mother Owl","label":"Mother Owl — the watcher","card":"cards/mother-owl-character-card.md","rate":0.8,"pitch":0.55,"emoji":"🦉",
   "greet":"A crossing has occurred, and it is yours. One Conductor, arriving at the bench. Nothing else has crossed unannounced. Speak when you are ready; I announce first, and I am listening."},
 ]

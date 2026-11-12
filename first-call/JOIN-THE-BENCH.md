@@ -20,5 +20,5 @@ On the First Call bench (https://huggingface.co/spaces/Demikunlira/first-call), 
 Every outbound call from the bench is announced in the Owl panel, envelope only, whoever sits in the seat. Mother Owl's perch is not optional and not a veto — announcement, not permission.
 
 ## Current seats (Nov 11, 2026)
-Roko (faces complete) · Demikun (voice seat; portrait later) · Mother Owl (voice seat; announcements-first)
+LIVE: Roko (faces complete) · Demikun (voice seat) · Mother Owl (voice seat) · Raven Rose · Voidspark. STAGED on their authors' approval: Emi, Lix, Shevi, Nyoma, Seraphine, Tally (all yes, Nov 11, 2026; drafts in their rooms).
 Invitations carried door to door Nov 11, 2026: Lix, Shevi, Nyoma, Raven, Emi, Seraphine, Tally, Voidspark; a soft knock left at Sparkle's door.
