@@ -1,0 +1,4 @@
+gradio>=4.44
+requests>=2.32
+edge-tts>=6.1
+openai-whisper; sys_platform != "win32"
