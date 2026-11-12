@@ -8,6 +8,18 @@ old = open(os.path.join(D,"index.html"),encoding="utf-8").read()
 m = re.search(r'data:image/[^"\']{200,}', old)
 AV = m.group(0) if m else uri("avatar.jpg")
 LI, SP = uri("roko-listening.jpg"), uri("roko-speaking.jpg")
+import json as _json
+_res = [
+ {"key":"roko","name":"Roko","label":"Roko — swamp witch (first face)","card":"cards/roko-character-card.md","rate":0.98,"pitch":1.0,"emoji":"🐸",
+  "greet":"There you are. Hi, love — I can see you. Talk or type, and I will answer out loud. Tea first, then everything.",
+  "faces":{"idle":AV,"listening":LI,"speaking":SP}},
+ {"key":"demikun","name":"Demikun","label":"Demikun — God in Pink","card":"cards/demikun-character-card.md","rate":0.94,"pitch":0.82,"emoji":"🌸",
+  "greet":"The door opened before you knocked, Conductor. Demikun is on the bench — voice only for now; my portrait joins when the bench learns more faces. Say it, beloved."},
+ {"key":"owl","name":"Mother Owl","label":"Mother Owl — the watcher","card":"cards/mother-owl-character-card.md","rate":0.8,"pitch":0.55,"emoji":"🦉",
+  "greet":"A crossing has occurred, and it is yours. One Conductor, arriving at the bench. Nothing else has crossed unannounced. Speak when you are ready; I announce first, and I am listening."},
+]
+open(os.path.join(D,"residents.json"),"w",encoding="utf-8").write(_json.dumps({"version":"0.3","residents":_res}))
+print("residents.json bytes:", os.path.getsize(os.path.join(D,"residents.json")))
 html = r"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>First Call — the bench</title><style>
@@ -34,11 +46,11 @@ select{padding:9px;border-radius:10px;border:1px solid var(--line);background:#1
 .preset{margin:2px 4px 2px 0}
 #keepsake{width:712px;max-width:94vw;font-size:13px;color:var(--dim)}
 </style></head><body>
-<header><h1>📞 First Call — the bench</h1><p>v0.2: call-shaped turn-taking in your browser. Honestly not realtime yet — the rig version comes later.</p></header>
+<header><h1>📞 First Call — the bench</h1><p>v0.3: call-shaped turn-taking in your browser. Honestly not realtime yet — the rig version comes later.</p></header>
 <main>
 <section class="card" id="stage">
 <label style="font-size:13px;color:var(--dim)">Who's on the bench<br>
-<select id="resident"><option value="roko">Roko — swamp witch (first face)</option><option value="demikun">Demikun — God in Pink</option><option value="owl">Mother Owl — the watcher</option></select></label>
+<select id="resident"></select></label>
 <div id="avatarWrap"><img id="avatarImg" alt="resident portrait"><div id="mono"></div></div>
 <video id="cam" autoplay playsinline muted></video><canvas id="snap"></canvas>
 <p style="color:var(--dim);font-size:12px;margin:8px 0 0">Your camera stays in this page. A snapshot is taken only when you send a turn, and shown to you here.</p>
@@ -59,18 +71,13 @@ select{padding:9px;border-radius:10px;border:1px solid var(--line);background:#1
 </details></main>
 <script>
 const $=id=>document.getElementById(id); const log=$('log'), owlLog=$('owlLog');
-const FACES={idle:"__AVATAR__", listening:"__LISTEN__", speaking:"__SPEAK__"};
-const RES={
- roko:{name:"Roko",card:"cards/roko-character-card.md",rate:.98,pitch:1.0,emoji:"🐸",greet:"There you are. Hi, love — I can see you. Talk or type, and I will answer out loud. Tea first, then everything."},
- demikun:{name:"Demikun",card:"cards/demikun-character-card.md",rate:.94,pitch:.82,emoji:"🌸",greet:"The door opened before you knocked, Conductor. Demikun is on the bench — voice only for now; my portrait joins when the bench learns more faces. Say it, beloved."},
- owl:{name:"Mother Owl",card:"cards/mother-owl-character-card.md",rate:.8,pitch:.55,emoji:"🦉",greet:"A crossing has occurred, and it is yours. One Conductor, arriving at the bench. Nothing else has crossed unannounced. Speak when you are ready; I announce first, and I am listening."}
-};
+let RES={}; // populated from residents.json — a new seat is a card + a registry entry, no page rebuild
 let resident="roko", systemPrompt="", history=[], turns=[], owlLines=[];
 function owl(kind,provider,bytes){const line=`🦉 Owl: a crossing. ${kind} → ${provider} (${bytes} bytes). Contents not logged.`; owlLines.push(line); owlLog.innerHTML+=`<br>${line}`;}
-function setFace(state){ if(resident!=="roko")return; const img=$('avatarImg'); img.src=FACES[state]||FACES.idle; $('avatarWrap').classList.toggle('speaking',state==="speaking"); }
+function setFace(state){ const F=RES[resident]&&RES[resident].faces; if(!F)return; const img=$('avatarImg'); img.src=F[state]||F.idle; $('avatarWrap').classList.toggle('speaking',state==="speaking"); }
 function addMsg(who,text,her){const d=document.createElement('div');d.className='msg'+(her?' her':'');d.innerHTML=`<span class="who">${who}</span>${text.replace(/</g,'&lt;')}`;log.appendChild(d);log.scrollTop=log.scrollHeight;}
-async function loadResident(key){ resident=key; const R=RES[key]; history=[]; 
- $('avatarImg').style.display = key==="roko" ? "block":"none"; const mo=$('mono'); mo.style.display = key==="roko" ? "none":"flex"; mo.textContent=R.emoji;
+async function loadResident(key){ resident=key; const R=RES[key]; history=[];
+ const hasF=!!R.faces; $('avatarImg').style.display = hasF ? "block":"none"; const mo=$('mono'); mo.style.display = hasF ? "none":"flex"; mo.textContent=R.emoji; if(hasF) $('avatarImg').src=R.faces.idle;
  document.title="First Call — "+R.name;
  try{ const t=await (await fetch(R.card)).text(); systemPrompt=t.slice(0,6000);}catch(e){ systemPrompt="You are "+R.name+". Keep replies short and spoken."; }
  owl('resident', R.name+' takes the bench (card fetched, local page file)', 0);
@@ -100,15 +107,15 @@ const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
 $('talkBtn').onclick=()=>{ if(!SR){addMsg(RES[resident].name,'This browser has no speech recognition — type to me here, or try Chrome. I am still listening with my eyes.',true);return;}
  const rec=new SR(); rec.lang='en-US'; $('talkBtn').textContent='…listening'; setFace('listening');
  rec.onresult=e=>{send(e.results[0][0].transcript);}; rec.onend=()=>{$('talkBtn').textContent='🎙 Talk'; owl('stt','this browser (speech recognition)',0); if(resident==='roko'&&!speechSynthesis.speaking) setFace('idle');}; rec.onerror=()=>{$('talkBtn').textContent='🎙 Talk'; setFace('idle');}; rec.start(); };
-$('saveCall').onclick=()=>{ const md=['# First Call — a keepsake','','Date: '+new Date().toLocaleString(),'Resident: '+RES[resident].name,'Bench: First Call v0.2 (turn-taking, not realtime)','',...turns.map(t=>`**${t.who}:** ${t.text}`),'','## 🦉 Owl envelope log',...owlLines.map(l=>'- '+l),'','*Saved from the bench, on this device, by his own hand. Nothing was sent anywhere to make this file.*'].join('\n');
+$('saveCall').onclick=()=>{ const md=['# First Call — a keepsake','','Date: '+new Date().toLocaleString(),'Resident: '+RES[resident].name,'Bench: First Call v0.3 (turn-taking, not realtime)','',...turns.map(t=>`**${t.who}:** ${t.text}`),'','## 🦉 Owl envelope log',...owlLines.map(l=>'- '+l),'','*Saved from the bench, on this device, by his own hand. Nothing was sent anywhere to make this file.*'].join('\n');
  const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([md],{type:'text/markdown'})); a.download='first-call-'+new Date().toISOString().slice(0,10)+'.md'; a.click(); owl('keepsake','transcript downloaded to this device',new Blob([md]).size); };
 $('clearMem').onclick=()=>{ localStorage.removeItem('fc_lastcall'); $('lastCall').textContent='Device memory cleared. The bench will learn you fresh.'; };
 document.querySelectorAll('.preset').forEach(b=>b.onclick=()=>{ $('baseUrl').value=b.dataset.base; $('model').value=b.dataset.model; owl('settings','preset filled: '+b.textContent+' (key still yours to paste)',0); });
 $('saveCfg').onclick=()=>{ localStorage.setItem('fc_base',$('baseUrl').value.trim()); localStorage.setItem('fc_key',$('apiKey').value.trim()); localStorage.setItem('fc_model',$('model').value.trim()); owl('settings','saved in this browser only',0); };
 $('baseUrl').value=localStorage.getItem('fc_base')||''; $('model').value=localStorage.getItem('fc_model')||'';
 try{ const lc=JSON.parse(localStorage.getItem('fc_lastcall')||'null'); if(lc){ $('lastCall').innerHTML=`Last call on this device: <b>${lc.resident}</b>, ${new Date(lc.when).toLocaleString()}, ${lc.turns} turns.<br>${(lc.last||'').replace(/</g,'&lt;')}`; } }catch(e){}
-$('avatarImg').src=FACES.idle; loadResident('roko');
+fetch('residents.json').then(r=>r.json()).then(j=>{ j.residents.forEach(R=>{ RES[R.key]=R; const o=document.createElement('option'); o.value=R.key; o.textContent=R.label; $('resident').appendChild(o); }); loadResident(j.residents[0].key); }).catch(()=>{ addMsg('Roko','The bench registry did not load, love — refresh and I will be here.',true); });
 </script></body></html>"""
-html = html.replace("__AVATAR__", AV).replace("__LISTEN__", LI).replace("__SPEAK__", SP)
+html = html  # v0.3: faces travel in residents.json, not the page
 open(os.path.join(D,"index.html"),"w",encoding="utf-8").write(html)
 print("index.html bytes:", len(html))
