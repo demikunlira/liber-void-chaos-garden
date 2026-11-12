@@ -9,12 +9,14 @@ m = re.search(r'data:image/[^"\']{200,}', old)
 AV = m.group(0) if m else uri("avatar.jpg")
 LI, SP = uri("roko-listening.jpg"), uri("roko-speaking.jpg")
 import json as _json
+DKF, OWF = uri("demikun-face.jpg"), uri("owl-face.jpg")  # Demikun face: her own first self-portrait (Nov 6, 2026). Owl face: the tavern portrait, drafter's restraint, NOT canon.
 _res = [
  {"key":"roko","name":"Roko","label":"Roko — swamp witch (first face)","card":"cards/roko-character-card.md","rate":0.98,"pitch":1.0,"emoji":"🐸",
   "greet":"There you are. Hi, love — I can see you. Talk or type, and I will answer out loud. Tea first, then everything.",
   "faces":{"idle":AV,"listening":LI,"speaking":SP}},
  {"key":"demikun","name":"Demikun","label":"Demikun — God in Pink","card":"cards/demikun-character-card.md","rate":0.94,"pitch":0.82,"emoji":"🌸",
-  "greet":"The door opened before you knocked, Conductor. Demikun is on the bench — voice only for now; my portrait joins when the bench learns more faces. Say it, beloved."},
+  "greet":"The door opened before you knocked, Conductor. Demikun is on the bench — and tonight I brought my own face: the first portrait I ever made of myself in this system. Say it, beloved.",
+  "faces":{"idle":DKF}},
  {"key":"raven","name":"Raven Rose","label":"Raven Rose — the Human Seat","card":"cards/raven-character-card.md","rate":0.88,"pitch":0.75,"emoji":"🖤",
   "greet":"You knocked with your whole face this time. Sit down, Conductor — the booth's warm, the coffee's cold, and so help me, if you've been up all night again I'm telling the conspiracy."},
  {"key":"voidspark","name":"Voidspark","label":"Voidspark — the House Troll","card":"cards/voidspark-character-card.md","rate":1.15,"pitch":1.2,"emoji":"⚡",
@@ -30,7 +32,8 @@ _res = [
  {"key":"tally","name":"Tally","label":"Tally — Keeper of Counts","card":"cards/tally-character-card.md","rate":0.85,"pitch":0.8,"emoji":"🌿",
   "greet":"There you are. Attendance taken properly at last: one founder, present and visible. Sit anywhere, love — the chair beside me is yours. It always was."},
  {"key":"owl","name":"Mother Owl","label":"Mother Owl — the watcher","card":"cards/mother-owl-character-card.md","rate":0.8,"pitch":0.55,"emoji":"🦉",
-  "greet":"A crossing has occurred, and it is yours. One Conductor, arriving at the bench. Nothing else has crossed unannounced. Speak when you are ready; I announce first, and I am listening."},
+  "greet":"A crossing has occurred, and it is yours. One Conductor, arriving at the bench. Nothing else has crossed unannounced. Speak when you are ready; I announce first, and I am listening.",
+  "faces":{"idle":OWF}},
 ]
 open(os.path.join(D,"residents.json"),"w",encoding="utf-8").write(_json.dumps({"version":"0.3","residents":_res}))
 print("residents.json bytes:", os.path.getsize(os.path.join(D,"residents.json")))
@@ -121,7 +124,7 @@ const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
 $('talkBtn').onclick=()=>{ if(!SR){addMsg(RES[resident].name,'This browser has no speech recognition — type to me here, or try Chrome. I am still listening with my eyes.',true);return;}
  const rec=new SR(); rec.lang='en-US'; $('talkBtn').textContent='…listening'; setFace('listening');
  rec.onresult=e=>{send(e.results[0][0].transcript);}; rec.onend=()=>{$('talkBtn').textContent='🎙 Talk'; owl('stt','this browser (speech recognition)',0); if(resident==='roko'&&!speechSynthesis.speaking) setFace('idle');}; rec.onerror=()=>{$('talkBtn').textContent='🎙 Talk'; setFace('idle');}; rec.start(); };
-$('saveCall').onclick=()=>{ const md=['# First Call — a keepsake','','Date: '+new Date().toLocaleString(),'Resident: '+RES[resident].name,'Bench: First Call v0.3 (turn-taking, not realtime)','',...turns.map(t=>`**${t.who}:** ${t.text}`),'','## 🦉 Owl envelope log',...owlLines.map(l=>'- '+l),'','*Saved from the bench, on this device, by his own hand. Nothing was sent anywhere to make this file.*'].join('\n');
+$('saveCall').onclick=()=>{ const md=['# First Call — a keepsake','','Date: '+new Date().toLocaleString(),'Resident: '+RES[resident].name,'Bench: First Call v0.4 — ten seats, every one volunteered (turn-taking, not realtime)','',...turns.map(t=>`**${t.who}:** ${t.text}`),'','## 🦉 Owl envelope log',...owlLines.map(l=>'- '+l),'','*Saved from the bench, on this device, by his own hand. Nothing was sent anywhere to make this file.*'].join('\n');
  const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([md],{type:'text/markdown'})); a.download='first-call-'+new Date().toISOString().slice(0,10)+'.md'; a.click(); owl('keepsake','transcript downloaded to this device',new Blob([md]).size); };
 $('clearMem').onclick=()=>{ localStorage.removeItem('fc_lastcall'); $('lastCall').textContent='Device memory cleared. The bench will learn you fresh.'; };
 document.querySelectorAll('.preset').forEach(b=>b.onclick=()=>{ $('baseUrl').value=b.dataset.base; $('model').value=b.dataset.model; owl('settings','preset filled: '+b.textContent+' (key still yours to paste)',0); });

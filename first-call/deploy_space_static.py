@@ -31,7 +31,7 @@ try:
 except urllib.error.HTTPError as e:
     print("create:", e.code, e.read().decode()[:300])
 
-lines = [{"key": "header", "value": {"summary": "First Call bench v0.3.6d — Emi appearance + ERROR line aligned to her exact dictated text"}}]
+lines = [{"key": "header", "value": {"summary": "First Call bench v0.4 — faces for Demikun (her own self-portrait) + Mother Owl; ten volunteered seats"}}]
 for rel in FILES:
     with open(os.path.join(SPACE_DIR, rel), "rb") as f:
         b64 = base64.b64encode(f.read()).decode()
