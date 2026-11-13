@@ -1,0 +1,7 @@
+# Accessories, outfits and toggles
+
+- Inventory each supplied prop, its art rights, transparent edges, target positions, scale, pose compatibility and whether it belongs in front of or behind each body part. Preserve the source artwork and crop coordinates; remove background fringes without erasing intentional colors.
+- For a hand-held prop, parent it to the appropriate hand or arm and inspect grip and occlusion throughout movement. For a floor object, anchor it to the scene or correct body/pose space, not a moving head. For floating objects, separate object and glow; use a small periodic offset and optional opacity or color pulse. Ensure a smooth looping transition.
+- Give each requested toggle its own parameter/expression and controller action. Specify whether it is independent or mutually exclusive with other states. Avoid resetting unrelated pose, outfit or effect controls. Use runtime-supported parameter IDs and verify actual drawable opacity or motion rather than only the control value.
+- Review every intended outfit and pose, front/back ordering, overlap with hands, face and clothing, movement bounds, clipping and framing. Check transitions and actual playback; document any unsupported combination. Keep the model, textures, expressions, physics, motion and controller version aligned.
+- Back up the editable rig and complete runtime, original and processed prop artwork, build scripts, external dependencies, configuration, and hashes. Test a restored copy and list external files or credentials needed separately; never include secrets.
